@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-export default function Quotations(){
+export default function Pending_Enquiry(){
+
     return (
         <div className="py-3 ">
             <div className="table-responsive">
@@ -7,11 +8,12 @@ export default function Quotations(){
                 <thead className="">
                     <tr>
                         <th scope="col">S.no</th>
-                        <th scope="col">Product No</th>
-                        <th scope="col">Product Name</th>
+                        <th scope="col">RFQ No</th>
+                        <th scope="col">Description</th>
                         <th scope="col">Validate Date</th>
-                        <th scope="col">Total Quatity</th>
-                        <th scope="col">Document</th>
+                        <th scope="col">Order Quantity</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Details</th>
                     </tr>
                 </thead>
                 <tbody class="table-group-divider">
@@ -21,7 +23,8 @@ export default function Quotations(){
                         <td>Pin</td>
                         <td>31/07/2025</td>
                         <td>90</td>
-                        <td><Link to='/Quotation_Details'>view</Link></td>
+                        <td>Released To RFQ</td>
+                        <td><Link to='/Supplier_Initial_Offer'>view</Link></td>
                         
                     </tr>
                     <tr>
@@ -30,6 +33,7 @@ export default function Quotations(){
                         <td>Pump</td>
                         <td>31/07/2025</td>
                         <td>90</td>
+                        <td>Released To RFQ</td>
                         <td><a href="#">view</a></td>
                     </tr>
                     <tr>
@@ -38,11 +42,12 @@ export default function Quotations(){
                         <td>Nozzle</td>
                         <td>31/07/2025</td>
                         <td>90</td>
+                        <td>Released To RFQ</td>
                         <td><a href="#">view</a></td>
                     </tr>
                 </tbody>
             </table>
             </div>
         </div>
-    )
+    );
 }

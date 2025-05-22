@@ -59,7 +59,8 @@ export default function Login() {
     }
 
     if(isAuthenticated()){
-        return <Navigate to="/Source_dashboard"/>
+        return <Navigate to="/Supplier_dashboard"/>
+        // return <Navigate to="/Source_dashboard"/>
     }
     
 

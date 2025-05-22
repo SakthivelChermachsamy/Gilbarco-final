@@ -1,5 +1,6 @@
 import logo from '../../assets/logo.svg'
 import profile from '../../assets/profile.svg'
+import { Link } from 'react-router-dom'
 export default function Navbar(props) {
     var user_name = "Sanjay"
     return (
@@ -14,7 +15,7 @@ export default function Navbar(props) {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav gap-4 ms-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="#">Home</a>
+                            <Link to="/Source_dashboard" className="nav-link active" aria-current="page" >Home</Link>
                         </li>
 
                         <li className="nav-item dropdown">
@@ -24,7 +25,7 @@ export default function Navbar(props) {
                             <ul className="dropdown-menu">
                                 <li><a className="dropdown-item activate" href="#">Suppliers Reply</a></li>
                                 <li><hr className="dropdown-divider" /></li>
-                                <li><a className="dropdown-item" href="#">Edit Suppliers</a></li>
+                                <li><Link to='/Supplier_edit' className="dropdown-item" >Edit Suppliers</Link></li>
                             </ul>
                         </li>
                         <li className="nav-item dropdown">
@@ -32,7 +33,7 @@ export default function Navbar(props) {
                                 Quotations
                             </a>
                             <ul className="dropdown-menu">
-                                <li><a className="dropdown-item" href="#">New Quotation</a></li>
+                                <li><Link className="dropdown-item" to='/New_Quotation'>New Quotation</Link></li>
                                 <li><hr className="dropdown-divider" /></li>
                                 <li><a className="dropdown-item" href="#">View Quotations</a></li>
                             </ul>
@@ -43,7 +44,7 @@ export default function Navbar(props) {
                                     {user_name}
                                 </a>
                                 <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="#">Profile</a></li>
+                                    <li><Link className="dropdown-item" to='/Profile'>Profile</Link></li>
                                     <li><hr className="dropdown-divider" /></li>
                                     <li><a className="dropdown-item" onClick={props.LogoutUser} style={{cursor:'pointer'}}>Sign Out</a></li>
                                 </ul>

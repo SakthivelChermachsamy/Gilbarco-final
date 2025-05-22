@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function ReplyTable() {
     return (
         <div className="py-3">
@@ -24,7 +25,7 @@ export default function ReplyTable() {
                             <td>Jhon Industries</td>
                             <td>97</td>
                             <td>90</td>
-                            <td><a href="#">View</a></td>
+                            <td><Link to='/Reply_Details'>View</Link></td>
                         </tr>
                         <tr>
                             <th scope="row">2</th>
